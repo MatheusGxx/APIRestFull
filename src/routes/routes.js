@@ -9,6 +9,6 @@ const controller = require('../controller/controller')
 // Delete -  remover dados
 
 
-router.get('/produtos', controller.get)
+router.get('/produtos/:id?', controller.get) // o '?' significa que ele pode pegar 1 produto ou todos os produtos do banco de dados.
 
 module.exports = router 
