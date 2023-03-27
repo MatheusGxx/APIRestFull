@@ -1,13 +1,15 @@
 const express = require('express')
 
+const db = require('./BancodeDados/database')
+const routes = require('./routes/routes')
 const app = express()
 
-const routes = require('./routes/routes')
+
 
 //Habilita o server para receber dados via post ( Formulario )
 app.use(express.urlencoded({extended: true}))
 
-
+db.connect()
 
 app.use('/api',routes)
 
