@@ -6,8 +6,8 @@ const app = express()
 
 
 
-//Habilita o server para receber dados via post ( Formulario )
-app.use(express.urlencoded({extended: true}))
+// Habilita o Server para receber dados no formato JSON
+app.use(express.json())
 
 db.connect()
 
