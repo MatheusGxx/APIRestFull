@@ -40,10 +40,22 @@ async function put(req, res){
     message: 'Produto Atualizado com sucesso',
     product,
   })
+}
+async function remove(req, res){
+    const { id } = req.params 
+
+    const remove = await productsModel.deleteOne({_id : id})
+
+    const message = remove ? 'Produto removido com sucesso' : 'error' // if ternario 
+
+    res.send({
+        message,
+    })
 
 }
 module.exports = {
     get,
     post,
     put,
+    remove,
 }
