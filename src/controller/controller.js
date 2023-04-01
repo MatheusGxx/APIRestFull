@@ -1,5 +1,6 @@
 const productsModel = require('../models/products')
 
+
 async function get(req,res){ // req params é apenas para pegar o id da url quando tem na rota /produtos/:id
     const { id } = req.params
      

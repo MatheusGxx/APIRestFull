@@ -14,4 +14,7 @@ router.post('/produtos', controller.post)
 router.put('/produtos/:id', controller.put)
 router.delete('/produtos/:id', controller.remove) // remove = delete
 
-module.exports = router 
+module.exports = router
+
+
+// O Controler Usa o Modelo para poder funcionar e as rotas que usam os controllers para poder funcionar.
