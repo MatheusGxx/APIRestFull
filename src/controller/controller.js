@@ -14,7 +14,7 @@ async function get(req,res){ // req params é apenas para pegar o id da url quan
 async function post(req, res){
   const{
     name,
-    brand,
+    Brand,
     price,
   } = req.body // req.body pega as informaçoes selecionadas do body ( page )
 
@@ -22,7 +22,7 @@ async function post(req, res){
 
   const product =  new productsModel({
     name,
-    brand,
+    Brand,
     price,
   })
 
