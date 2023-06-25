@@ -19,7 +19,6 @@ const origincors = [
     
 ]
 
-
 // CONCEITO DE CORS = CORS É O O CONCEITO DE QUEM VAI PODER ACESSAR SUA API, SE SUA API VAI SER PUBLICA OU SE SUA API VAI SER UMA API PRIVADA QUE SOMENTE O SEU SERVIÇO PODERA ACESSAR ELA.
 app.use(cors({ // Mostrando quem pode acessar a API e quem nao pode
     origin: function (origin, callback ){
@@ -38,4 +37,4 @@ app.use('/api',routes)
 
 
 const port = process.env.PORT  || 8080
-app.listen(port, () =>  console.log(`O servidor esta escutando e aberto na porta ${port}`))
+app.listen(port, () =>  console.log(`O servidor esta escutando e aberto na porta ${port}`)) 
